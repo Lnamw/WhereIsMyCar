@@ -24,6 +24,7 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     
     if (self = [super init]) {
+        self.carCoords = [aDecoder decodeCGPointForKey:@"carLocationCoords"];
         self.carCoordLat = [aDecoder decodeFloatForKey:@"carLocationLat"];
         self.carCoordLng = [aDecoder decodeFloatForKey:@"carLocationLng"];
     }
@@ -34,10 +35,10 @@
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     
+    [aCoder encodeCGPoint:self.carCoords forKey:@"carLocationCoords"];
     [aCoder encodeFloat:self.carCoordLat forKey:@"carLocationLat"];
     [aCoder encodeFloat:self.carCoordLng forKey:@"carLocationLng"];
-
-    
+        
 }
 
 @end
