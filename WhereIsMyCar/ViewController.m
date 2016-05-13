@@ -98,7 +98,7 @@
         
         MKPolyline *line = [MKPolyline polylineWithCoordinates:lineCoordinates count:2];
         [self.mapView addOverlay:line];
-        [self.mapView setVisibleMapRect:line.boundingMapRect];
+//        [self.mapView setVisibleMapRect:line.boundingMapRect];
         
 
 //        //Try to add direction but it's not that...
