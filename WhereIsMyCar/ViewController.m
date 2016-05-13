@@ -92,6 +92,12 @@
         
         MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(locCoord, 800, 800);
         [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
+    } else {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Car not found!" message:@"Are you sure you came by car? If you took the tube, please check CittyMapper" preferredStyle:UIAlertControllerStyleActionSheet];
+        UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        }];
+        [alert addAction:ok];
+        [self presentViewController:alert animated:YES completion:nil];
     }
     
 }
