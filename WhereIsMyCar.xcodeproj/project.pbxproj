@@ -13,6 +13,10 @@
 		AAFD5E3B1CE4C72E00C62589 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAFD5E391CE4C72E00C62589 /* Main.storyboard */; };
 		AAFD5E3D1CE4C72E00C62589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAFD5E3C1CE4C72E00C62589 /* Assets.xcassets */; };
 		AAFD5E401CE4C72E00C62589 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAFD5E3E1CE4C72E00C62589 /* LaunchScreen.storyboard */; };
+		AAFD5E4A1CE4CAB200C62589 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFD5E491CE4CAB200C62589 /* CoreLocation.framework */; };
+		AAFD5E4C1CE4CAB900C62589 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFD5E4B1CE4CAB900C62589 /* MapKit.framework */; };
+		AAFD5E511CE4D3B000C62589 /* CarLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFD5E501CE4D3B000C62589 /* CarLocation.m */; };
+		AAFD5E531CE5E80300C62589 /* trafalgar Square.gpx in Resources */ = {isa = PBXBuildFile; fileRef = AAFD5E521CE5E80300C62589 /* trafalgar Square.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,11 @@
 		AAFD5E3C1CE4C72E00C62589 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAFD5E3F1CE4C72E00C62589 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAFD5E411CE4C72E00C62589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAFD5E491CE4CAB200C62589 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AAFD5E4B1CE4CAB900C62589 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AAFD5E4F1CE4D3B000C62589 /* CarLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarLocation.h; sourceTree = "<group>"; };
+		AAFD5E501CE4D3B000C62589 /* CarLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarLocation.m; sourceTree = "<group>"; };
+		AAFD5E521CE5E80300C62589 /* trafalgar Square.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "trafalgar Square.gpx"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAFD5E4C1CE4CAB900C62589 /* MapKit.framework in Frameworks */,
+				AAFD5E4A1CE4CAB200C62589 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +53,9 @@
 		AAFD5E241CE4C72E00C62589 = {
 			isa = PBXGroup;
 			children = (
+				AAFD5E521CE5E80300C62589 /* trafalgar Square.gpx */,
+				AAFD5E4B1CE4CAB900C62589 /* MapKit.framework */,
+				AAFD5E491CE4CAB200C62589 /* CoreLocation.framework */,
 				AAFD5E2F1CE4C72E00C62589 /* WhereIsMyCar */,
 				AAFD5E2E1CE4C72E00C62589 /* Products */,
 			);
@@ -58,10 +72,10 @@
 		AAFD5E2F1CE4C72E00C62589 /* WhereIsMyCar */ = {
 			isa = PBXGroup;
 			children = (
+				AAFD5E4E1CE4D39200C62589 /* Model */,
+				AAFD5E4D1CE4D37600C62589 /* View Controller */,
 				AAFD5E331CE4C72E00C62589 /* AppDelegate.h */,
 				AAFD5E341CE4C72E00C62589 /* AppDelegate.m */,
-				AAFD5E361CE4C72E00C62589 /* ViewController.h */,
-				AAFD5E371CE4C72E00C62589 /* ViewController.m */,
 				AAFD5E391CE4C72E00C62589 /* Main.storyboard */,
 				AAFD5E3C1CE4C72E00C62589 /* Assets.xcassets */,
 				AAFD5E3E1CE4C72E00C62589 /* LaunchScreen.storyboard */,
@@ -77,6 +91,24 @@
 				AAFD5E311CE4C72E00C62589 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AAFD5E4D1CE4D37600C62589 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AAFD5E361CE4C72E00C62589 /* ViewController.h */,
+				AAFD5E371CE4C72E00C62589 /* ViewController.m */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		AAFD5E4E1CE4D39200C62589 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AAFD5E4F1CE4D3B000C62589 /* CarLocation.h */,
+				AAFD5E501CE4D3B000C62589 /* CarLocation.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +170,7 @@
 			files = (
 				AAFD5E401CE4C72E00C62589 /* LaunchScreen.storyboard in Resources */,
 				AAFD5E3D1CE4C72E00C62589 /* Assets.xcassets in Resources */,
+				AAFD5E531CE5E80300C62589 /* trafalgar Square.gpx in Resources */,
 				AAFD5E3B1CE4C72E00C62589 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +185,7 @@
 				AAFD5E381CE4C72E00C62589 /* ViewController.m in Sources */,
 				AAFD5E351CE4C72E00C62589 /* AppDelegate.m in Sources */,
 				AAFD5E321CE4C72E00C62589 /* main.m in Sources */,
+				AAFD5E511CE4D3B000C62589 /* CarLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
